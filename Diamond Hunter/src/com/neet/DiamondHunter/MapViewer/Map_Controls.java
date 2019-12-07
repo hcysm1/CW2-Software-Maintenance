@@ -172,7 +172,6 @@ public class Map_Controls{
         }
     });
 }
-	
 	@FXML
     public void back() throws Exception{
         Scene scene = back.getScene();
@@ -325,5 +324,6 @@ public class Map_Controls{
 
     @FXML
     private Button axe;
+
     
 }
