@@ -17,6 +17,15 @@ public class Popup_Msg {
         window.setTitle(title);
         window.setMinWidth(300);
         window.setMinHeight(80);
+        
+        Label label = new Label();
+        label.setText(message);
+        Button closeButton = new Button("Close");
+        closeButton.setOnAction(e -> window.close());
+
+        VBox layout = new VBox();
+        layout.getChildren().addAll(label,closeButton);
+        layout.setAlignment(Pos.CENTER);
 
         Scene alert_scene = new Scene(layout);
         window.setScene(alert_scene);
