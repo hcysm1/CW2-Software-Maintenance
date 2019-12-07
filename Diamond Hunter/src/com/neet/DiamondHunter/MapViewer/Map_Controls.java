@@ -281,6 +281,8 @@ public class Map_Controls implements Initializable {
 	@FXML
 	private TextField boatx;
 
+	
+
 	@FXML
 	private TextField boaty;
 
