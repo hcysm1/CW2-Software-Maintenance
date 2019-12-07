@@ -1,5 +1,23 @@
 package com.neet.DiamondHunter.MapViewer;
 
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
+import javafx.stage.Stage;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
 public class Map_Controls{
@@ -28,7 +46,80 @@ public class Map_Controls{
                 save_axeY,save_axeX
         );
         
+        axey.setText(Integer.toString(save_axeX/16));
+        axex.setText(Integer.toString(save_axeY/16));
+        boaty.setText(Integer.toString(save_boatX/16));
+        boatx.setText(Integer.toString(save_boatY/16));
+
+
+        boat.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>() {
+            @Override
+            public void handle(javafx.scene.input.MouseEvent event) {
+                select=1;
+            }
+        });
+
+        axe.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>() {
+            @Override
+            public void handle(javafx.scene.input.MouseEvent event) {
+                select=0;
+            }
+        });
         
+        canvas.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>() {
+            @Override
+            public void handle(javafx.scene.input.MouseEvent e) {
+                GraphicsContext gg = canvas.getGraphicsContext2D();
+                if(select==0){
+                    draw(gg);
+                    if(first_boat){
+                        gg.drawImage(
+                                itemss[0],
+                                save_boatY,save_boatX
+                        );
+                    }
+                    if(!first_boat){
+                        gg.drawImage(
+                                itemss[0],
+                                boatX*16,boatY*16
+                        );
+                    }
+                    axeX=(int)e.getX()/16;
+                    axeY=(int)e.getY()/16;
+                    axex.setText(Integer.toString(axeX));
+                    axey.setText(Integer.toString(axeY));
+                    first_axe=false;
+                    gg.drawImage(
+                            itemss[1],
+                            axeX*16,axeY*16
+                    );
+                }
+                else{
+                    draw(gg);
+                    if(first_axe){
+                        gg.drawImage(
+                                itemss[1],
+                                save_axeY,save_axeX
+                        );
+                    }
+                    if(!first_axe) {
+                        gg.drawImage(
+                                itemss[1],
+                                axeX * 16, axeY * 16
+                        );
+                    }
+                    boatX=(int)e.getX()/16;
+                    boatY=(int)e.getY()/16;
+                    boatx.setText(Integer.toString(boatX));
+                    boaty.setText(Integer.toString(boatY));
+                    first_boat=false;
+                    gg.drawImage(
+                            itemss[0],
+                            boatX*16,boatY*16
+                    );
+                }
+            }
+        });
         
         save.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>() {
             @Override
