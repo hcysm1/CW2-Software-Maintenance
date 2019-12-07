@@ -30,7 +30,36 @@ public class Map_Controls{
         
         
         
-        
+        save.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>() {
+            @Override
+            public void handle(javafx.scene.input.MouseEvent event) {
+            	//if(first_boat==false){
+               try{
+                   if(first_axe==true && first_boat==true){
+                       checkInvalidPos(axeY,axeX,boatY,boatX);}
+                   if(first_axe==false && first_boat==false){
+                       checkInvalidPos(axeX,axeY,boatX,boatY);}
+                   if(first_axe==true && first_boat==false){
+                       checkInvalidPos(axeY,axeX,boatX,boatY);}
+                   if(first_axe==false && first_boat==true){
+                       checkInvalidPos(axeX,axeY,boatY,boatX);}
+
+                   if(first_axe == false){
+                   save_axeX=axeY*16;
+                   save_axeY=axeX*16;
+                   }
+                   if(first_boat == false){
+                   save_boatX=boatY*16;
+                   save_boatY=boatX*16;
+                   }
+                   saved.setContentText("Position of Axe (x,y)  : "+save_axeY/16+" "+save_axeX/16+"\nPosition of Boat (x,y) : "+save_boatY/16+" "+save_boatX/16 +
+                		   "\n\n * please note that there is possibility that you might not be able to complete the game due to improper positioning.");
+                   saved.showAndWait();
+               }catch(MyException e){
+                Popup_Msg.display("Alert",e.message);
+               }
+
+            }
         
         private void checkInvalidPos(int axeX, int axeY, int boatX, int boatY) throws MyException {
             // TODO Auto-generated method stub
