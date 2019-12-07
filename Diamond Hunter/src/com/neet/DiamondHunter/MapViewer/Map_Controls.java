@@ -171,12 +171,7 @@ public class Map_Controls{
             }
         }
     });
-	}
-	
-	
-	
-	
-	
+}
 	
 	@FXML
     public void back() throws Exception{
@@ -184,7 +179,10 @@ public class Map_Controls{
         Stage currentscene = (Stage)scene.getWindow();
         currentscene.hide();
     }
-    
+
+    //////////////////////////////////////////////////
+    // Methods to extract images from resources
+    // also to load tiles and map, and draw images in respective position according to map.map
     public void loadItems(String s) {
         Image setTile = new Image(s);
         itemss = new Image[2];
@@ -281,8 +279,10 @@ public class Map_Controls{
         }
 
     }
-    
-    
+
+    //////////////////////////////////////////////////
+
+    // Variables Declaration
     private int axeX=26,axeY=37,boatX=12,boatY=4;
     public static int save_axeX=416,save_axeY=592,save_boatX=192,save_boatY=64;
     int select=0;
@@ -297,9 +297,8 @@ public class Map_Controls{
     private Image[] itemss;
     public Image image;
     private int numTilesAcross;
-    
-    
 
+    ///////////////////////////////////////////////////////
     @FXML
     public Canvas canvas;
 
@@ -326,4 +325,5 @@ public class Map_Controls{
 
     @FXML
     private Button axe;
+    
 }
