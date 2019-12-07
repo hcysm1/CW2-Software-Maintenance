@@ -1,0 +1,50 @@
+[33mcommit 278816da57909dca82c73a3447d916d198c942e8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mupstream/master[m[33m)[m
+Merge: 77ed770 7db48aa
+Author: Sonia Mubasher <49655681+hcysm1@users.noreply.github.com>
+Date:   Sat Dec 7 20:00:34 2019 +0800
+
+    Merged master of contributor with origin
+    
+    Updated Code
+
+[33mcommit 7db48aab7ad8288ee304ee0fe0afd25adfea4fca[m
+Merge: 79d4bbd 22ba473
+Author: hcyss2 <57673725+hcyss2@users.noreply.github.com>
+Date:   Sat Dec 7 19:57:12 2019 +0800
+
+    Merged development branch with master
+    
+    Uploaded file for map coordinates
+
+[33mcommit 22ba4731475be62e1c4b8bd8b89826ae6c428bb6[m
+Author: Shrabana Biswas Shruti <hcyss2@nottingham.edu.my>
+Date:   Sat Dec 7 19:46:07 2019 +0800
+
+    Uploaded file for map coordinates
+
+[33mcommit 77ed7707dae435722c7bdb7dfdd737bf1c504d8d[m
+Merge: 5e00dfa 79d4bbd
+Author: Sonia Mubasher <49655681+hcysm1@users.noreply.github.com>
+Date:   Sat Dec 7 19:43:12 2019 +0800
+
+    Merged code from other contributor for Map_Viewer file
+    
+    Updated Map_Viewer
+
+[33mcommit 79d4bbd3558d18724dc800eddbacfbcfee05cc2f[m
+Author: Shrabana Biswas Shruti <hcyss2@nottingham.edu.my>
+Date:   Sat Dec 7 19:31:24 2019 +0800
+
+    Updated Map_Viewer
+
+[33mcommit 5e00dfa71ac073da1aaefd97ddc448c1bd749d2f[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/development[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: sonia <soniamubasher1991@gmail.com>
+Date:   Sat Dec 7 19:01:31 2019 +0800
+
+    Uploaded first file for Map viewer application
+
+[33mcommit 34eaa6f3995e049367ba77adc5c3e470f1264f8d[m
+Author: sonia <soniamubasher1991@gmail.com>
+Date:   Sat Dec 7 17:49:09 2019 +0800
+
+    Uploaded Coursework2 Files
