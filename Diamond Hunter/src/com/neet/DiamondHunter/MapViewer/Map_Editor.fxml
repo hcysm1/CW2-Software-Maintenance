@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="940.0" style="-fx-background-color: #a6e26b;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.MapViewer.Map_Controls">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/Sprites/mapbackground.png" />
+         </image>
+      </ImageView>
+      <Canvas fx:id="canvas" height="640.0" layoutX="14.0" layoutY="14.0" width="640.0" />
+      <TextField fx:id="axex" layoutX="807.0" layoutY="232.0" prefHeight="30.0" prefWidth="35.0" style="-fx-background-color: #a6e26b;  visibility: hidden;"/>
+      <Button fx:id="save" layoutX="710.0" layoutY="363.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="144.0" style="-fx-background-color: rgba(255,255,255,0.0);">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="144.0" pickOnBounds="true">
+               <image>
+                  <Image url="/Sprites/save.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="axey" layoutX="871.0" layoutY="232.0" prefHeight="30.0" prefWidth="35.0" style="-fx-background-color: #a6e26b;  visibility: hidden;" />
+      
+      <TextField fx:id="boatx" layoutX="810.0" layoutY="362.0" prefHeight="30.0" prefWidth="35.0" style="-fx-background-color: #a6e26b; visibility: hidden;" />
+      <TextField fx:id="boaty" layoutX="874.0" layoutY="362.0" prefHeight="30.0" prefWidth="35.0" style="-fx-background-color: #a6e26b;  visibility: hidden;"/>
+      
+      <Button fx:id="axe" layoutX="690.0" layoutY="300.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="96.0" style="-fx-background-color: rgba(255,255,255,0.0);">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="94.0" pickOnBounds="true">
+               <image>
+                  <Image url="/Sprites/setaxe.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="boat" layoutX="780.0" layoutY="300.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: rgba(255,255,255,0.0);">
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="96.0" pickOnBounds="true">
+               <image>
+                  <Image url="/Sprites/setboat.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="back" layoutX="710.0" layoutY="433.0" mnemonicParsing="false" onAction="#back" prefHeight="53.0" prefWidth="154.0" style="-fx-background-color: rgba(255,255,255,0.0);">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="144.0" pickOnBounds="true">
+               <image>
+                  <Image url="/Sprites/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
