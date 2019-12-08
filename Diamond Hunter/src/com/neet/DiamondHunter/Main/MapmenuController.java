@@ -41,7 +41,7 @@ public class MapmenuController {
 	@FXML
 	public void mapviewer() throws Exception{
 		
-		Parent root = FXMLLoader.load(getClass().getResource("../TileMapEditor/TME.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("../MapViewer/Map_Editor.fxml"));
         primaryStage.setTitle("Edit Map");        
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
