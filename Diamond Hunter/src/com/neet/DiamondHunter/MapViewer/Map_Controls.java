@@ -32,28 +32,35 @@
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-	// if the user clicks the save button the changes made to positions will be
-	// updated
-	// in the game
+	//The following line of code will generate an notification window that will  
+	// let the user know that the new coordinates for the boat and the axe 
+	// have been saved in the game.
 	Alert saved = new Alert(Alert.AlertType.INFORMATION);
 	saved.setTitle("Axe and Boat");
 	saved.setHeaderText("Your changes are now saved");
 
-	// uploading images to interface
+	// Linking images to the java file from the resources folder,
+	// with map background and gaming spirites.	
 	GraphicsContext g = canvas.getGraphicsContext2D();
 	loadTiles("/Tilesets/testtileset.gif");
 	loadItems("/Sprites/items.gif");
 	loadMap("/Maps/testmap.map");
-
+	
+	//The axe and boat will be placed on top of the map background.
 	draw(g);
 	g.drawImage(itemss[0], save_boatY, save_boatX);
 	g.drawImage(itemss[1], save_axeY, save_axeX);
-
+	
+	//Setting up x, y plane to measure the axe and boat coordinates later on.
 	axey.setText(Integer.toString(save_axeX / 16));
 	axex.setText(Integer.toString(save_axeY / 16));
 	boaty.setText(Integer.toString(save_boatX / 16));
 	boatx.setText(Integer.toString(save_boatY / 16));
-
+	
+	//All mouseclick functions are used to track the user mouse movement 
+	//inorder to keep track of the gaming items. 
+	//The first two blocks of code decide whether the item has 
+	//been selected. This is done by seting binary parameters.
 	boat.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>() {
 		@Override
 		public void handle(javafx.scene.input.MouseEvent event) {
@@ -68,7 +75,8 @@
 		}
 	});
 
-	// to position axe and boat onto map
+	// To calculate the axe and boat position within the canvas, the mouse event 
+	//code is combined with the previous x,y axis.
 	canvas.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>() {
 		@Override
 		public void handle(javafx.scene.input.MouseEvent e) {
@@ -105,7 +113,7 @@
 		}
 	});
 
-	// save the selected positions
+	// The selected postions of the "mouse clicks" will be save to the game. 
 
 	save.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>() {
 		@Override
@@ -142,7 +150,11 @@
 
 		}
 
-		// check if the positions are valid i.e not placed on tree or water
+		// Checking to see if the boat and axe placements are valid.
+		//i.e. they are not place on top pf trees or water.
+		//If the user does so, an error prompt will appear when the user
+		//clicks on the save button.
+		//The user will be able to try again onve he closes the propmt message.
 		private void checkInvalidPos(int axeX, int axeY, int boatX, int boatY) throws MyException {
 
 			if ((axeX * 16) == save_axeX && (axeY * 16) == save_axeY && (boatX * 16) == save_boatX
@@ -286,7 +298,8 @@
 	private Image[] itemss;
 	public Image image;
 	private int numTilesAcross;
-
+	
+	//Following public variables declarations are automaticly generated while using scene builder. 
 	@FXML
 	public Canvas canvas;
 
