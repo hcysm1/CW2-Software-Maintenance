@@ -21,7 +21,4 @@ public class Map_Viewer extends Application {
 		primaryStage.setResizable(true);
 		primaryStage.show();
 	}
-	
-	
-
 }
