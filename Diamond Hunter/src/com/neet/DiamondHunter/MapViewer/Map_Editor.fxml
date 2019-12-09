@@ -28,6 +28,7 @@
 		<TextField fx:id="axex" layoutX="807.0" layoutY="232.0"
 			prefHeight="30.0" prefWidth="35.0"
 			style="-fx-background-color: #a6e26b;  visibility: hidden;" />
+		
 		<Button fx:id="save" layoutX="710.0" layoutY="463.0"
 			mnemonicParsing="false" prefHeight="47.0" prefWidth="144.0"
 			style="-fx-background-color: rgba(255,255,255,0.0);">
@@ -87,6 +88,21 @@
 				<Cursor fx:constant="HAND" />
 			</cursor>
 		</Button>
+		<Button layoutX="710.0" layoutY="532.0" mnemonicParsing="false" onAction="#rungame" prefHeight="46.0" prefWidth="104.0" style="-fx-background-color: rgba(255,255,255,0.0);" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/Sprites/rungame.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic></Button>
+         
 		<Button fx:id="back" layoutX="710.0" layoutY="603.0"
 			mnemonicParsing="false" onAction="#back" prefHeight="53.0"
 			prefWidth="154.0"
@@ -105,3 +121,4 @@
 		</Button>
 	</children>
 </AnchorPane>
+
