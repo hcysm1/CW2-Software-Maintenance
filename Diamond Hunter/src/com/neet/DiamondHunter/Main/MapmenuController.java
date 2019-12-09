@@ -1,53 +1,44 @@
-	package com.neet.DiamondHunter.Main;
+    package com.neet.DiamondHunter.Main;
 
-	import javax.swing.*;
-
-
-
-	import javafx.event.ActionEvent;
-	import javafx.fxml.FXML;
-	import javafx.fxml.FXMLLoader;
-	import javafx.scene.Parent;
-	import javafx.scene.Scene;
-	import javafx.stage.Stage;
+    import javax.swing.*;
 
 
-	public class MapmenuController {
 
-		Stage primaryStage= new Stage();
-		private static JFrame window;
+    import javafx.event.ActionEvent;
+    import javafx.fxml.FXML;
+    import javafx.fxml.FXMLLoader;
+    import javafx.scene.Parent;
+    import javafx.scene.Scene;
+    import javafx.stage.Stage;
 
 
-		// Event Listener on Button.onAction
-		@FXML
-		public void rungame(ActionEvent event) {
-			System.out.println("Run game clicked");
-			window = new JFrame("Diamond Hunter");	
 
-			window.add(new GamePanel());
+  public class MapmenuController {
 
-			window.setResizable(false);
-			window.pack();
+    Stage primaryStage= new Stage();
+    private static JFrame window;
 
-			window.setLocationRelativeTo(null);
-			window.setVisible(true);
-			window.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 
-		}
+    // Event Listener on Button.onAction
+    @FXML
+    public void rungame(ActionEvent event) {
+      System.out.println("Run game clicked");
+      window = new JFrame("Diamond Hunter");	
 
-		public static JFrame getWindow(){
-			return window;
-		}
+      window.add(new GamePanel());
 
-		@FXML
-		public void mapviewer() throws Exception{
+      window.setResizable(false);
+      window.pack();
 
-			Parent root = FXMLLoader.load(getClass().getResource("../MapViewer/Map_Editor.fxml"));
-		primaryStage.setTitle("Edit Map");        
-		Scene scene = new Scene(root);
-		primaryStage.setScene(scene);
-		primaryStage.setResizable(false);
-		primaryStage.show();
+      window.setLocationRelativeTo(null);
+      window.setVisible(true);
+      window.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 
-	}
-	}
+    }
+
+    public static JFrame getWindow(){
+      return window;
+    }
+
+
+  }
