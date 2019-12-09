@@ -14,7 +14,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			System.out.println("Game progress :\nGame Started");
+			System.out.println("Game progress : Started");
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("MapMenu.fxml"));
 			Scene scene = new Scene(root,600,357);
 			primaryStage.setScene(scene);

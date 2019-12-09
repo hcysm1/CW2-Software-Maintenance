@@ -12,8 +12,7 @@ public class Map_Viewer extends Application {
 	public static void main(String[] args) {
 		Application.launch();
 	}
-
-	// Creating GUI for Map_viewer application
+     // Creating GUI for Map_viewer application
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getResource("Map_Editor.fxml"));
@@ -22,5 +21,7 @@ public class Map_Viewer extends Application {
 		primaryStage.setResizable(true);
 		primaryStage.show();
 	}
+	
+	
 
 }
