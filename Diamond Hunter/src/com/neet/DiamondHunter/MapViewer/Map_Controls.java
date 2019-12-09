@@ -134,8 +134,7 @@ public class Map_Controls implements Initializable {
 						save_boatY = boatX * 16;
 					}
 					saved.setContentText("Position of Axe (x,y)  : " + save_axeY / 16 + " " + save_axeX / 16
-							+ "\nPosition of Boat (x,y) : " + save_boatY / 16 + " " + save_boatX / 16
-							+ "\n\n * you might not be able to complete the game due to improper positioning.");
+							+ "\nPosition of Boat (x,y) : " + save_boatY / 16 + " " + save_boatX / 16);
 					saved.showAndWait();
 				} catch (MyException e) {
 					Popup_Msg.display("Alert", e.message);
