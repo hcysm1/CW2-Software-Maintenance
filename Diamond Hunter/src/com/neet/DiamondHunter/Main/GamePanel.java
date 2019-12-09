@@ -11,15 +11,12 @@ import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
-
 import javax.swing.JPanel;
-
 import com.neet.DiamondHunter.Manager.GameStateManager;
 import com.neet.DiamondHunter.Manager.Keys;
 
 @SuppressWarnings("serial")
 public class GamePanel extends JPanel implements Runnable, KeyListener {
-	
 	// dimensions
 	// HEIGHT is the playing area size
 	// HEIGHT2 includes the bottom window
@@ -28,13 +25,13 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 	public static final int HEIGHT2 = HEIGHT + 16;
 	public static final int SCALE = 3;
 	
-	// game loop stuff
+	// variables for gqame loop
 	private Thread thread;
 	private boolean running;
 	private final int FPS = 30;
 	private final int TARGET_TIME = 1000 / FPS;
 	
-	// drawing stuff
+	// variables for drawing
 	private BufferedImage image;
 	private Graphics2D g;
 	
@@ -58,7 +55,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 		}
 	}
 	
-	// run new thread
+	// thread for running the game
 	public void run() {
 		
 		init();
@@ -92,7 +89,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 		
 	}
 	
-	// initializes fields
+	// initializing the fields
 	private void init() {
 		running = true;
 		image = new BufferedImage(WIDTH, HEIGHT2, 1);
@@ -100,13 +97,13 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 		gsm = new GameStateManager();
 	}
 	
-	// updates game
+	// updating the keys
 	private void update() {
 		gsm.update();
 		Keys.update();
 	}
 	
-	// draws game
+	// drawing function
 	private void draw() {
 		gsm.draw(g);
 	}
@@ -118,7 +115,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 		g2.dispose();
 	}
 	
-	// key event
+	// Event key
 	public void keyTyped(KeyEvent key) {}
 	public void keyPressed(KeyEvent key) {
 		Keys.keySet(key.getKeyCode(), true);
