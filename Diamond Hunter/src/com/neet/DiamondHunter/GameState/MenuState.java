@@ -73,8 +73,6 @@ public class MenuState extends GameState {
 		if(currentOption == 1) {
 			JFrame test = MapmenuController.getWindow();
 			test.setVisible(false);
-			test.dispose();
-			System.exit(0);
 		}
 	}
 	
