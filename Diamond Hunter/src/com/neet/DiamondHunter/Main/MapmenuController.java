@@ -15,14 +15,14 @@ import javafx.stage.Stage;
 public class MapmenuController {
 	
 	Stage primaryStage= new Stage();
-	private static JFrame window;
+	private static JFrame window = new JFrame("Diamond Hunter");
 
 	
 	// Event Listener on Button.onAction
 	@FXML
 	public void rungame(ActionEvent event) {
 		System.out.println("Run game clicked");
-		window = new JFrame("Diamond Hunter");	
+		//window = new JFrame("Diamond Hunter");	
 		
 		window.add(new GamePanel());
 		
