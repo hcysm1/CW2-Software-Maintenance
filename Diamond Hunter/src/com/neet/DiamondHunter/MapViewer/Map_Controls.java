@@ -1,5 +1,6 @@
 package com.neet.DiamondHunter.MapViewer;
 
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,6 +19,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
+
+
+
+import com.neet.DiamondHunter.Main.GamePanel;
 
 public class Map_Controls implements Initializable {
 
@@ -247,6 +255,23 @@ public class Map_Controls implements Initializable {
 
 	}
 
+	// Event Listener on Button.onAction
+	@FXML
+	public void rungame(ActionEvent event) {
+		System.out.println("Run game clicked");
+		JFrame window = new JFrame("Diamond Hunter"); 
+		
+		window.add(new GamePanel());
+		
+		window.setResizable(false);
+		window.pack();
+		
+		window.setLocationRelativeTo(null);
+		window.setVisible(true);
+		window.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+
+	}
+
 	// Declaring variables
 	private int axeX = 26, axeY = 37, boatX = 12, boatY = 4;
 	public static int save_axeX = 416, save_axeY = 592, save_boatX = 192, save_boatY = 64;
@@ -280,8 +305,6 @@ public class Map_Controls implements Initializable {
 
 	@FXML
 	private TextField boatx;
-
-	
 
 	@FXML
 	private TextField boaty;

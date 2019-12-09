@@ -14,20 +14,7 @@
          </image>
       </ImageView>
       
-      <Button layoutX="248.0" layoutY="176.0" mnemonicParsing="false" onAction="#rungame" prefHeight="46.0" prefWidth="104.0" style="-fx-background-color: #a6e26b;" wrapText="true">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <ImageView fitHeight="38.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/Sprites/rungame.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-         </graphic></Button>
+      
       <Button layoutX="248.0" layoutY="231.0" mnemonicParsing="false" onAction="#mapviewer" prefHeight="46.0" prefWidth="128.0" style="-fx-background-color: #a6e26b;">
          <graphic>
             <ImageView fitHeight="46.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
