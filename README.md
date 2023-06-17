@@ -1,4 +1,4 @@
-# CW2-Software-Maintenance
+# Diamond Hunter Game - Map Viewer
 
 
 ![final](https://user-images.githubusercontent.com/57673725/70454257-19266100-1ae5-11ea-8feb-50a6478f91bb.PNG)
